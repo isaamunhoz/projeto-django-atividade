@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ProjetoDjango.app.primeiroCrudConfig'
+    'primeiroCrud.apps.PrimeirocrudConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'ProjetoDjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'projdjan',
+        'USER': 'root',
+        'PASSWORD': 'nimma2004', 
+        'HOST': 'localhost', # Ou o endereço do seu servidor MySQL
+        'PORT': '3306', # Porta padrão do MySQL   
     }
 }
+
 
 
 # Password validation
